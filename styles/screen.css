@@ -1,0 +1,271 @@
+@import   url(http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #FDFDFD;
+	color: #34495E;
+	font: 14px/1.231 "Lato", sans-serif;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-size: 19px;
+}
+
+a {
+	color: #3498DB;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+
+/****** Header ******/
+div#top {
+	background: #3498DB;
+	border-bottom: 1px #aaa;
+	font-size: 13px;
+	line-height: 2em;
+}
+
+div#top a {
+	text-decoration: none;
+	color: #FDFDFD;
+}
+
+div#top h1 {
+	float: left;
+	font-size: 13px;
+	font-weight: normal;
+	text-transform: lowercase;
+}
+
+div#top h1 a {
+	display: block;
+	padding: 6px 16px 6px 0;
+}
+
+div#top h1 a:hover {
+	text-decoration: underline;
+}
+
+div#top ul#menu {
+	list-style: none;
+	float: right;
+}
+
+div#top ul#menu li {
+	float: left;
+}
+
+div#top ul#menu li a {
+	display: block;
+	padding: 6px 16px;
+	border-left: 1px #aaa;
+}
+
+div#top ul#menu li a:hover {
+	text-decoration: underline;
+}
+
+div#top ul#menu li.feed a img {
+	position: relative;
+	top: 3px;
+}
+
+
+/******* Main ******/
+div#main {
+	float: left;
+	width: 100%;
+	background: #FFF;
+}
+
+div#content {
+	width: 100%;
+	padding: 64px 0 0 0;
+}
+
+div#content h2 {
+	margin-bottom: 24px;
+	font-size: 32px;
+	font-weight: normal;
+}
+
+div#content h2 a {
+	text-decoration: none;
+	color: #000;
+}
+
+div#content h2 a:hover {
+	color: #1B76AC;
+}
+
+div#content h2 span.date {
+	display: block;
+	font-size: 13px;
+}
+
+div#content h3 {
+	margin: 32px 0 16px 0;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+
+/****** Post ******/
+div.post {
+	margin-bottom: 64px;
+}
+div.post img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto 16px auto;
+}
+div.post .right {
+	display: inline-block;
+	float: right;
+	margin: 0 0 16px 16px;
+	max-width: 250px;
+}
+div.post .left {
+	display: inline-block;
+	float: left;
+	margin: 0 16px 16px 0;
+	max-width: 250px;
+}
+div.post div.thumb {
+	background: #000;
+	padding: 6px;
+	border-radius: 2px;
+	font-size: 13px;
+}
+div.post div.thumb p:first-child {
+	margin: 0 !important;
+}
+div.post div.thumb p img {
+	margin: 0 !important;
+	border-radius: 3px;
+}
+div.post div.thumb p:last-child {
+	margin: 0;
+	padding: 12px 0 !important;
+	color: #ddd;
+	text-align: center;
+	line-height: 1em;
+}
+div.post div.thumb a {
+	color: #ddd;
+}
+div.post p {
+	margin: 0 0 16px 0;
+	line-height: 1.8em;
+}
+div.post ul, div.post ol {
+	margin: 0 0 16px 32px;
+	line-height: 1.8em;
+}
+
+div.post blockquote {
+	margin-bottom: 16px;
+	padding: 16px 16px 1px 16px;
+	background: #95A5A6;
+	color: #fff;
+	border-radius: 3px;
+}
+
+div.post blockquote a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+div.post pre {
+	margin-bottom: 16px;
+	background: #21213F;
+	padding: 16px 24px;
+	color: #ffa;
+	border-radius: 3px;
+	box-shadow: inset 0 0 6px #222;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+div.post pre code {
+	display: inline;
+	padding: 0;
+	color: #ECF0F1;
+	background-color: transparent;
+}
+
+div.post code {
+	display: inline-block;
+	padding: 0 3px;
+	font-family: 'andale mono',
+	monospace;
+	color: #21213F;
+	background: #ECF0F1;
+	border-radius: 2px;
+}
+
+div.post div.video {
+	margin-bottom: 16px;
+}
+
+
+/****** Pagination ******/
+div#content div.pagination {
+	margin: 0 0 64px 0;
+	text-align: center;
+}
+div#content div.pagination span {
+	color: #aaa;
+}
+div#content div.pagination span.previous {
+	margin: 0 16px 0 0;
+}
+div#content div.pagination span.next {
+	margin: 0 0 0 16px;
+}
+div#content div.pagination span a {
+	padding: 12px 16px;
+	text-decoration: none;
+	border-radius: 3px;
+	background: #ddd;
+	color: #000;
+}
+div#content div.pagination span a:hover {
+	background: #1B76AC;
+	color: #fff;
+}
+
+
+/****** Footer ******/
+div#footer {
+	clear: both;
+	border-top: 1px;
+	padding: 16px 0;
+	font-size: 13px;
+	background: #bdc1c5;
+}
+
+div#footer p {
+	margin: 0;
+	line-height: 1em;
+}
+
+div#footer p a {
+	color: #000;
+}
+
+
+/****** Common stuff... ******/
+.aux {
+	width: 900px;
+	margin: 0 auto;
+}
+.clear {
+	clear: both;
+}
