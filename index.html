@@ -21,16 +21,16 @@ title: mazzi.github.com
 <div class="pagination">
 	{% if paginator.previous_page %}
 		{% if paginator.page == 2 %}
-			<span class="previous"><a href="/" class="previous">Previo</a></span>
+			<span class="previous"><a href="/" class="previous">Previous</a></span>
 		{% else %}
-			<span class="previous"><a href="/page{{paginator.previous_page}}">Previo</a></span>
+			<span class="previous"><a href="/page{{paginator.previous_page}}">Previous</a></span>
 		{% endif %}
 	{% else %}
-		<span class="previous">Previo</span>
+		<span class="previous">Previous</span>
 	{% endif %}
 	{% if paginator.next_page %}
-		<span class="next"><a href="/page{{paginator.next_page}}">Siguiente</a></span>
+		<span class="next"><a href="/page{{paginator.next_page}}">Next</a></span>
 	{% else %}
-		<span class="next">Siguiente</span>
+		<span class="next">Next</span>
 	{% endif %}
 </div>
