@@ -1,0 +1,5 @@
+name: mazzi.github.com
+description: Personal blog.
+url: http://mazzi.github.com
+permalink: /:year/:title.html
+paginate: 5
