@@ -18,7 +18,7 @@ Agile development is good, but under certain boundaries.
 
 > Who made changes in this line of code? What's the difference between the current version and last week's? How many lines of code did we change in this release? Which files get changed most often? This kind of information is invaluable for bug-tracking, audit, performance, and quality purposes.
 
-About writing specifications like APIs, functional requeriments and the importance of those documents
+About writing specifications like APIs, functional requeriments and the importance of those documents.
 
 > Dealing with computer systems is hard. Dealing with people is even harder. But as a species, we've had longer to figure out issues of human interactions. Some of the solutions we've come up with during the last few millennia can be applied to writing software as well. One of the best solutions for ensuring plain dealing is the contract.
 
