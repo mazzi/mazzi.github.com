@@ -4,7 +4,7 @@ title: The Pragmatic Programmer: From Journeyman to Master
 tags: [books]
 ---
 
-One of the last books that I read for my profession is [The Pragmatic Programmer: From Journeyman to Master](http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X). I feel the necesity of share a couple of good quotations.
+One of the last books that I read for my profession is [The Pragmatic Programmer: From Journeyman to Master](http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X). I feel the necessity of share a couple of good quotations.
 
 What happens when we are proactive and we find a lot of obstacles, excuses or "yes but" arguments? 
 
