@@ -19,7 +19,9 @@ After the installation, is a good idea to create the first database
 	creating template1 database in /usr/local/var/postgres ...
 	FATAL: could not create shared memory segment: Cannot allocate memory
 	DETAIL: Failed system call was shmget(key=1, size=1318912, 03600).
-	HINT: This error usually means that PostgreSQL's request for a shared memory segment exceeded available memory or swap space. To reduce the request size (currently 1318912 bytes), reduce PostgreSQL's shared_buffers parameter (currently 50) and/or its max_connections parameter (currently 10).
+	HINT: This error usually means that PostgreSQL's request for a shared memory segment exceeded 
+        available memory or swap space. To reduce the request size (currently 1318912 bytes), reduce
+        PostgreSQL's shared_buffers parameter (currently 50) and/or its max_connections parameter (currently 10).
 	The PostgreSQL documentation contains more information about shared memory configuration.
 	child process exited with exit code 1
 	initdb: removing contents of data directory "data"
