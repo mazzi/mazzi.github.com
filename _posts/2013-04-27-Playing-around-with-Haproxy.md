@@ -35,7 +35,7 @@ Regarding the balancing, it's quick and easy to configure Haproxy using the `lis
         server          srv02 192.168.0.2:8080 weight 1 maxconn 1000 check inter 10000 rise 1 fall 2
 
 
-It's important not to include `option ssl-hello-chk` to this configuration because if we do so, haproxy will consider them down because of the `rise` and `fall` directives. Haproxy will not bej able to receive an answer status because we are checking HTTP servers instead of HTTPS. 
+It's important not to include `option ssl-hello-chk` to this configuration because if we do so, haproxy will consider them down because of the `rise` and `fall` directives. Haproxy will not be able to receive an answer status because we are checking HTTP servers instead of HTTPS. 
 
 The `path_reg` directive is not the optimum regarding speed, but it depends on how many requests per second we need to analyze.
 
