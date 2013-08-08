@@ -4,7 +4,7 @@ title: Some MySQL handy tips
 tags: [tips, copypaste, mysql]
 ---
 
-This post is kind of a "copy paste memo" memo for myself.
+This post is kind of a "copy paste memo" for myself. Oldies but goldies.
 
 How to check a `my.cnf` file syntax without restarting the service?
 
