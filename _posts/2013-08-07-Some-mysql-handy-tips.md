@@ -4,7 +4,7 @@ title: Some MySQL handy tips
 tags: [tips, copypaste, mysql]
 ---
 
-This post is kind of a "copy paste memo" for myself. Oldies but goldies.
+This post is kind of a "copy paste memo" to myself. Oldies but goldies.
 
 How to check a `my.cnf` file syntax without restarting the service?
 
@@ -14,6 +14,7 @@ All the things that appear in the console are useful (of course, syntax errors i
 
 From mysql 5.6, the syntax to log slow queries and queries that perform full table scans (bad for performance!) changed. Here they are the new options.
 
+    [mysqld]
     slow-query-log = ON
     slow_query_log_file = /var/log/mysql/mysql-slow.log
     long_query_time = 10
