@@ -24,11 +24,11 @@ What's next then? Just configure your application to load the extension if it's 
 
 Now, choose your favourite HTTP server (Apache, Nginx, whatever) and configure the UI that is provided with Xhprof. In there, there's a list of all the existing runs that were executed. Basically one for each HTTP request in this example.
 
-<img src="/images/2013/2013-09-16-sample-flat-view.jpg" alt="Network Layout" class="center" />
+<img src="/images/2013/2013-09-16-sample-flat-view.jpg" alt="xhprof flat view" class="center" />
 
 In the flat view, there is values for each method/function call with the ammount of them, processor and memory usage. I'm more a photographic person, so I prefer to see a callgraph of these values.
 
-<img src="/images/2013/2013-09-16-sample-callgraph-image.jpg" alt="Network Layout" class="center" />
+<img src="/images/2013/2013-09-16-sample-callgraph-image.jpg" alt="xhprof callgraph" class="center" />
 
 In red and yellow are being displayed critial function calls in terms of memory, cpu usage and ammount of calls. Useful for detecting low performance in algorithms.
 
