@@ -4,11 +4,11 @@ title: Profiling PHP with Facebook xhprof
 tags: [php, profiling, facebook, xhprof]
 ---
 
-To improve speed of our sites (or scripts) we need to detect bottelnecks. How we can accomplish that? profililng. What's profiling? It's form of dynamic programing that anayzes and measures different aspects of software like memory usage, time, cyclomatic complexity, usage of functions and other useful metrics. Without metrics we cannot see improvement.
+To improve speed of our sites (or scripts) we need to detect bottlenecks. How we can accomplish that? profiling. What's profiling? It's form of dynamic programing that analyzes and measures different aspects of software like memory usage, time, cyclomatic complexity, usage of functions and other useful metrics. Without metrics we cannot see improvement.
 
 As a long time user of Zend extension Xdebug I wanted to try something different. With a little bit of research I found Facebook Zend extension XHprof and I must say that is an excellent tool.
 
-The installation was straight away. You need to compile the module and add it to your php.ini file. RTFM number 1.
+The installation was straight away. You need to compile the module and add it to your php.ini file.
 
 What's next then? Just configure your application to load the extension if it's available. Something like this...
 
@@ -22,7 +22,7 @@ What's next then? Just configure your application to load the extension if it's 
     	Logger::info ( "Profiler ENABLED" );
 	}
 
-Now, choose your favourite HTTP server (Apache, Nginx, whatever) and configure the UI that is provided with Xhprof (RTFM number 2) In there, there's a list of all the existing runs that were executed. Basically one for each HTTP request in this example.
+Now, choose your favourite HTTP server (Apache, Nginx, whatever) and configure the UI that is provided with Xhprof. In there, there's a list of all the existing runs that were executed. Basically one for each HTTP request in this example.
 
 <img src="/images/2013/2013-09-16-sample-flat-view.jpg" alt="Network Layout" class="center" />
 
