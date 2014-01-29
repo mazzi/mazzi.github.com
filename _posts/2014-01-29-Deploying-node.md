@@ -44,9 +44,8 @@ Finally, we can create a virtual host in nginx to serve the app to the ouside wo
     upstream nodejs {
           server 127.0.0.1:3000 max_fails=0; 
     } 
-
-   server { 
-      server_name nodejs.newlocalhost.com; 
+	server { 
+      server_name mynodeapp.com; 
 
       add_header Strict-Transport-Security max-age=500; 
 
