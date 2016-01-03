@@ -11,6 +11,5 @@ You can reach me through the following means:
 4. [twitter.com/mazzi](http://www.twitter.com/mazzi)
 5. [flickr.com/mazzi](http://www.flickr.com/mazzi)
 6. [last.fm/mazzifm](http://www.last.fm/user/mazzifm)
-7. [del.icio.us/lmazzi](http://delicious.com/lmazzi)
 
 Nope, [I don't have a Facebook account](http://edition.cnn.com/2013/02/25/opinion/rushkoff-why-im-quitting-facebook).
