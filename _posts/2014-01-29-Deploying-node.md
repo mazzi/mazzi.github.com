@@ -8,10 +8,10 @@ All good. You wrote your first [node](http://nodejs.org/) app using [express](ht
 
 First of all, I had to do it in a [DigitalOcean](http://www.digitalocean.com) VPS using Ubuntu 12.04 TLS, so my first idea was to install node using `apt-get install nodejs`. No problems at all, except that was an extremely old version. Node ecosystem is changing day by day so if you are not aware of that you can end with an edge version in development and a stable in production. To get then the latest version, I suggest to use [Chris Lea's repository](https://launchpad.net/~chris-lea/+archive/node.js/)
 
-	$ sudo apt-get install python-software-properties 
-	$ sudo apt-add-repository ppa:chris-lea/node.js
- 	$ sudo apt-get update
- 	$ sudo apt-get install nodejs
+        $ sudo apt-get install python-software-properties
+        $ sudo apt-add-repository ppa:chris-lea/node.js
+        $ sudo apt-get update
+        $ sudo apt-get install nodejs
 
 So far, so good. Next will be install [npm](https://npmjs.org), the node package manager with `apt-get install npm`.
 
@@ -44,7 +44,7 @@ Finally, we can create a virtual host in nginx to serve the app to the ouside wo
     upstream nodejs {
           server 127.0.0.1:3000 max_fails=0; 
     } 
-	server { 
+    server { 
       server_name mynodeapp.com; 
 
       add_header Strict-Transport-Security max-age=500; 
