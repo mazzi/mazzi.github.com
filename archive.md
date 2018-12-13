@@ -3,7 +3,7 @@ layout: page
 title: Archive
 ---
 
-If you are tired of pagination, you can fide here all the posts on this blog.
+If you are tired of pagination, you can find here all the posts on this blog.
 
 <ul>
   {% for post in site.posts %}
