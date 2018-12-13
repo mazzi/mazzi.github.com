@@ -250,11 +250,6 @@ div#footer {
 	font-size: 13px;
 	background: #bdc1c5;
 	background: url(tiles.png) 0 0 repeat;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
 }
 
 div#footer p {
