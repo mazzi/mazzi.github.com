@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Contact
+title: Archive
 ---
 
-You can reach me through the following means:
+If you are tired of pagination, you can fide here all the posts on this blog.
 
-1. <lmazzitelli@gmail.com> / <lmazzitelli@pm.me>
-2. [linkedin.com/lmazzitelli](http://www.linkedin.com/in/lmazzitelli)
-3. [github.com/mazzi](http://www.github.com/mazzi)
-4. [twitter.com/mazzi](http://www.twitter.com/mazzi)
-
-Nope, [I don't have a Facebook account](http://edition.cnn.com/2013/02/25/opinion/rushkoff-why-im-quitting-facebook).
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
