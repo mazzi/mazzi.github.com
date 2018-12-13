@@ -1,4 +1,4 @@
-@import   url(http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic);
+@import   url(https://fonts.googleapis.com/css?family=Noto+Serif+SC);
 
 * {
 	margin: 0;
@@ -8,13 +8,13 @@
 body {
 	background: #FDFDFD;
 	color: #34495E;
-	font: 14px/1.231 "Lato", sans-serif;
-	font-family: 'Merriweather Sans', sans-serif;
+	font: 14px/1.231;
+	font-family: 'Noto Serif SC', serif;
 	font-size: 19px;
 }
 
 a {
-	color: #3498DB;
+	color: #973C3F;
 	text-decoration: underline;
 }
 
@@ -25,7 +25,7 @@ a:hover {
 
 /****** Header ******/
 div#top {
-	background: #3498DB;
+	background: #973C3F;
 	border-bottom: 1px #aaa;
 	font-size: 13px;
 	line-height: 2em;
@@ -34,6 +34,7 @@ div#top {
 div#top a {
 	text-decoration: none;
 	color: #FDFDFD;
+	text-shadow: 2px 2px #000;
 }
 
 div#top h1 {
@@ -101,7 +102,7 @@ div#content h2 a {
 }
 
 div#content h2 a:hover {
-	color: #1B76AC;
+	color: #973C3F;
 }
 
 div#content h2 span.date {
@@ -237,7 +238,7 @@ div#content div.pagination span a {
 	color: #000;
 }
 div#content div.pagination span a:hover {
-	background: #1B76AC;
+	background: #973C3F;
 	color: #fff;
 }
 
