@@ -8,7 +8,7 @@ Here you will find a list of open source contributions that I made and also proj
 ### Personal projects
 
 
-1. [Chorichannel](http://www.chorichannel.com.ar) - Based on your location, tells you how good is to make a BBQ. Built in NodeJs, MongoDB, ExpressJs.
+1. [Chorichannel](http://www.chorichannel.com.ar) - Based on your location, tells you how good is to make a BBQ. Built in NodeJs, MongoDB, ExpressJs. - R.I.P.
 2. [Coverboard](https://github.com/Coverboard) - Code Coverage metrics analysis. A Gem to add to your project and a display artifact. Built in RoR.
 
 ### Latest Open Source Contributions
