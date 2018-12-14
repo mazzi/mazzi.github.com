@@ -84,7 +84,7 @@ div#main {
 }
 
 div#content {
-	padding: 64px 0 0 0;
+	padding: 4em 0 0 0;
 	text-align: justify;
 }
 
@@ -188,8 +188,8 @@ div.post pre {
 	color: #ffa;
 	border-radius: 3px;
 	box-shadow: inset 0 0 6px #222;
-	font-size: 1.2em;
-	line-height: 20px;
+	font-size: 0.7em;
+	line-height: 1.5em;
 }
 
 div.post pre code {
@@ -245,8 +245,8 @@ div#content div.pagination span a:hover {
 div#footer {
 	clear: both;
 	border-top: 1px;
-	padding: 16px 0;
-	font-size: 13px;
+	padding: 2em;
+	font-size: 0.6em;
 	background: #bdc1c5;
 }
 
