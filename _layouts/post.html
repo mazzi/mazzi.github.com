@@ -1,28 +1,26 @@
 {% include header.html %}
 		<div id="main">
-			<div class="aux">
-				<div id="content">
-					<div class="post">
-						<h2>
-							{{ page.title }}
-							<span class="date">{{ page.date| date: "%d / %m / %Y" }}</span>
-						</h2>
-						{{ content }}
-					</div>
+			<div id="content">
+				<div class="post">
+					<h2>
+						{{ page.title }}
+						<span class="date">{{ page.date| date: "%d / %m / %Y" }}</span>
+					</h2>
+					{{ content }}
+				</div>
 
-                                        <div id="comments">
-                                            <div id="disqus_thread"></div>
-                                            <script>
-                                                var disqus_shortname = 'mazzigithubcom';
-                                                (function() {
-                                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                                                })();
-                                            </script>
-                                        </div>
+									<div id="comments">
+										<div id="disqus_thread"></div>
+										<script>
+											var disqus_shortname = 'mazzigithubcom';
+											(function() {
+												var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+												dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+												(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+											})();
+										</script>
+									</div>
 
-				</div><!-- #content -->
-			</div><!-- .aux -->
+			</div><!-- #content -->
 		</div><!-- #main -->
 {% include footer.html %}
