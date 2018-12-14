@@ -29,7 +29,7 @@ div#top {
 	font-size: 1em;
 	line-height: 2em;
 	text-transform: uppercase;
-	padding: 0 3em 0 3em;
+	padding: 0 7em 0 7em;
 }
 
 div#top a {
@@ -78,9 +78,9 @@ div#top ul#menu li.feed a img {
 
 /******* Main ******/
 div#main {
-	float: left;
 	background: #FFF;
-	padding: 0 3em 0 3em;
+	padding: 0 7em 0 7em;
+	margin:auto;
 }
 
 div#content {
@@ -90,7 +90,7 @@ div#content {
 
 div#content h2 {
 	margin-bottom: 24px;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: normal;
 }
 
@@ -105,7 +105,7 @@ div#content h2 a:hover {
 
 div#content h2 span.date {
 	display: block;
-	font-size: 0.8em;
+	font-size: 0.7em;
 }
 
 div#content h3 {
