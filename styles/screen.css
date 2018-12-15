@@ -190,6 +190,7 @@ div.post pre {
 	box-shadow: inset 0 0 6px #222;
 	font-size: 0.7em;
 	line-height: 1.5em;
+	overflow-y: auto;
 }
 
 div.post pre code {
@@ -202,8 +203,7 @@ div.post pre code {
 div.post code {
 	display: inline-block;
 	padding: 0 3px;
-	font-family: 'andale mono',
-	monospace;
+	font-family: 'andale mono', monospace;
 	color: #21213F;
 	background: #ECF0F1;
 	border-radius: 2px;
