@@ -4,7 +4,7 @@ title:  "Twelve arguments to sneak in features"
 tags: [product, management, entrepreneurs, roadmap]
 ---
 
-When your product gets traction, you’ll  nd yourself inundated with good ideas for features. These will come from your customers, your colleagues, and your- self. Because they’re good ideas, there will always be lots of reasons to say yes to them. **Here’s 12 arguments that are commonly used to sneak features into a product**:
+When your product gets traction, you’ll  nd yourself inundated with good ideas for features. These will come from your customers, your colleagues, and yourself. Because they’re good ideas, there will always be lots of reasons to say yes to them. **Here’s 12 arguments that are commonly used to sneak features into a product**:
 
 1. But the data looks good
 2. But it’ll only take a few minutes
