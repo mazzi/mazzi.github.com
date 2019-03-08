@@ -23,6 +23,8 @@ Here you will find a list of open source contributions that I made and also proj
 
 5. [Coverboard](https://github.com/Coverboard) - Coverage metrics analysis. With two main components, Simplecov-Coverboard is gem that you can add to your RoR project and send metrics to the second component, Coverboard, to display metrics in real time. Developed during Helpling Hackaton 2015.
 
+6. [The Coral Project](https://github.com/coralproject/talk) - The Coral Project improves community on news sites through open-source software. In particular Talk, that brings a better commenting experience.
+
 ### And...
 
 You can find more on my [Github account](https://github.com/mazzi).
