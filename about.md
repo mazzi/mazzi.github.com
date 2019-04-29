@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Lautaro Mazzitelli (mazzi)
+title: About Lautaro Mazzitelli
 ---
 
 I'm a software engineer. Most of the things that I made in my professional carreer can be read in my
