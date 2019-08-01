@@ -10,6 +10,7 @@ Here you will find a list of open source contributions that I made and also proj
 
 1. [Chorichannel](http://www.chorichannel.com.ar) - Based on your location, tells you how good is to make a BBQ. Built in NodeJs, MongoDB, ExpressJs. - R.I.P.
 2. [Coverboard](https://github.com/Coverboard) - Code Coverage metrics analysis. A Gem to add to your project and a display artifact. Built in RoR.
+3. [Landing Generic](https://github.com/mazzi/landing-generic) - A generic landing page to capture email leads. NodeJs + MongoDB.
 
 ### Latest Open Source Contributions
 
@@ -24,6 +25,8 @@ Here you will find a list of open source contributions that I made and also proj
 5. [Coverboard](https://github.com/Coverboard) - Coverage metrics analysis. With two main components, Simplecov-Coverboard is gem that you can add to your RoR project and send metrics to the second component, Coverboard, to display metrics in real time. Developed during Helpling Hackaton 2015.
 
 6. [The Coral Project](https://github.com/coralproject/talk) - The Coral Project improves community on news sites through open-source software. In particular Talk, that brings a better commenting experience.
+
+7. [DuckDuckGo](https://github.com/duckduckgo/duckduckgo-locales) - The search engine that doesn't track you.
 
 ### And...
 
