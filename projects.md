@@ -28,6 +28,8 @@ Here you will find a list of open source contributions that I made and also proj
 
 7. [DuckDuckGo](https://github.com/duckduckgo/duckduckgo-locales) - The search engine that doesn't track you.
 
+8. [Maidsafe](https://github.com/maidsafe) - Providing Privacy, Security and Freedom.
+
 ### And...
 
 You can find more on my [Github account](https://github.com/mazzi).
