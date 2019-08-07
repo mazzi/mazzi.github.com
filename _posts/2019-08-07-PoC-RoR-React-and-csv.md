@@ -152,7 +152,7 @@ Let's create the namespace for the routes.
 
         export default Result;
 
-Heading now to `http://localhost:3000/` you should see something like this:
+Run the rails server with `rails s` and the webpack sever `./bin/webpack-dev-server`. Heading now to `http://localhost:3000/` you should see something like this:
 
 <img src="/images/2019/2019-08-07-form.png" alt="Simple form in React and RoR" class="center" />
 
