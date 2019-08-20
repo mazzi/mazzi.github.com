@@ -12,7 +12,7 @@ Let's start bottom up.
 
 ### Model creation and importing the data
 
-Download from [this url](https://opendata-ajuntament.barcelona.cat/data/en/dataset/est-padro-domicilis-sexe/resource/39106a1d-de6d-4fb1-a39c-261c472a7c8) the file `2019_domicilis_sexe.csv`. It's open data from Barcelona, identifiying "Homes of the city of Barcelona according to the sex of the people who live in them." It's just an example. Any other CSV file could be good as well.
+Download from [this url](https://opendata-ajuntament.barcelona.cat/data/en/dataset/est-padro-domicilis-sexe/resource/39106a1d-de6d-4fb1-a39c-261c472a7c8) the file `2019_domicilis_sexe.csv`. It's open data from Barcelona, identifiying "Homes of the city of Barcelona according to the sex of the people who live in them." It's just an example. Any other CSV file should be good as well, but you'll need to change the mapping of the fields and the types.
 
 How to import this data into sqlite3 using Rails, and [seeds](https://edgeguides.rubyonrails.org/active_record_migrations.html#migrations-and-seed-data)?
 
@@ -38,16 +38,16 @@ How to import this data into sqlite3 using Rails, and [seeds](https://edgeguides
         end
 
 3. Let's create the model for this table using:
-`rails g model SexData year:integer district_code district_name neighbourhood_code:integer neighbourhood_name sex number:integer`
-By default Rails uses strings as type for db fields. Just be explicit on integers on this case.
-4. If the model was successfully created, you should see `./app/models/sex_datum.rb` and a migration should be executed: `rake db:migrate` so our database gets updated with the new table/model.
+        rails g model SexData year:integer district_code district_name neighbourhood_code:integer neighbourhood_name sex number:integer
+By default Rails uses `strings` as type for db fields. Just be explicit on `integers` on this case.
+4. If the model was successfully created, you should see `./app/models/sex_datum.rb` on your filesystem. A migration then, should be executed for the creation of the table: `rake db:migrate`.
 5. Now with the model, the csv data and the seeds, let's import the data: `rake db:seed`
-6. To check that the model was created, and the data imported, let's use rails console: `rails c`
-7. Once there, let's find one record: `SexDatum.all` Check names, types and values.
+6. To check that the model was created and the data imported, let's use rails console: `rails c`
+7. Once there, let's find records: `SexDatum.all` Check names, types and values. All set!
 
 ### Writing the Controller and handling the routes
 
-Let's create the namespace for the routes.
+Let's create the namespace for the routes, so we can handle versions in the future.
 
 1. Create the directory `./controllers/api/v1/`
 2. And the file `sex_datum_controller.rb` in the same directory containing two methods: one to return all the records (just a test) and another one that will filter records by `district_code` (as an example)
@@ -78,7 +78,7 @@ Let's create the namespace for the routes.
 
 ### Writing the View in React.js
 
-1. An empty file should be created in `./app/views/home/index.html.erb`. This file should as a placeholder. The real content will be on `./app/javascript/components/App.jsx` served by webpack. Remember to install the gem and configure the path on `webpacker.yml`. The tile `App.jsx` will have the following content:
+1. An empty file should be created in `./app/views/home/index.html.erb`. This file should act as a placeholder. The real content will be on `./app/javascript/components/App.jsx` served by webpack. Remember to install the gem and configure the path on `webpacker.yml` (sorry, maybe a long topic for the same post) The tile `App.jsx` will have the following content:
 
         import React from 'react'
         import InputDistrictCode from './InputDistrictCode'
