@@ -13,11 +13,11 @@ function init() {
     let re = new RegExp('night-mode' + "=([^;]+)");
     let nightMode = re.exec(document.cookie);
 
-    if (nightMode[1] === 'true') {
+    if ((nightMode != null) && (nightMode[1] === 'true')) {
         enableNightMode( list );
-    } else {
-        disableNightMode( list );
+        return;
     }
+    disableNightMode( list );
 }
 
 /* Night Mode Listener */
