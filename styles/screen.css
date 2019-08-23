@@ -12,6 +12,20 @@ body {
 	font-size: 1.3em;
 }
 
+body.night-mode,
+body.night-mode h2,
+body.night-mode h2 a {
+  background: rgb(0, 0, 0);
+  color: #FDFDFD;
+}
+
+body.night-mode div#content h2 a {
+	color: #973C3F;
+}
+body.night-mode div#content h2 a:hover {
+	color: white;
+}
+
 a {
 	color: #973C3F;
 	text-decoration: underline;
@@ -75,10 +89,40 @@ div#top ul#menu li.feed a img {
 	top: 3px;
 }
 
+.night-mode-switch input[type="checkbox"] {
+	display: none;
+}
+.night-mode-switch label {
+	cursor: pointer;
+}
+
+.night-mode-switch input[type="checkbox"] + label {
+	display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+	height: 20px;
+	margin-top: 8px;
+	background: url('../images/contrast-button.svg') 0px center no-repeat;
+}
+
+.night-mode-switch input[type="checkbox"]:checked + label {
+	display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+	height: 20px;
+	margin-top: 8px;
+	background: url('../images/contrast-button.svg') 0px center no-repeat;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
 
 /******* Main ******/
 div#main {
-	background: #FFF;
+	
 	padding: 0 10% 0 10%;
 	margin:auto;
 }
@@ -96,11 +140,10 @@ div#content h2 {
 
 div#content h2 a {
 	text-decoration: none;
-	color: #000;
 }
 
 div#content h2 a:hover {
-	color: #973C3F;
+	color: black;
 }
 
 div#content h2 span.date {
