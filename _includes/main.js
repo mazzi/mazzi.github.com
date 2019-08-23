@@ -9,9 +9,11 @@
 /* cookie reading */
 function init() {
     let list = document.body.classList;
-    let nightMode = document.cookie;
 
-    if (nightMode.split('=')[1] === 'true') {
+    let re = new RegExp('night-mode' + "=([^;]+)");
+    let nightMode = re.exec(document.cookie);
+
+    if (nightMode[1] === 'true') {
         enableNightMode( list );
     } else {
         disableNightMode( list );
