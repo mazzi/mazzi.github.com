@@ -10,6 +10,8 @@ Why this blog? To write about things that I learn from my co-workers, friends an
 
 Thanks to [dfgonzalez](http://www.dfgonzalez.com.ar) for the simple layout of this blog :)
 
+Night mode icon made by [Yannick](https://www.flaticon.com/authors/yannick) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
+
 You can reach me through the following means:
 
 1. <lmazzitelli@gmail.com> / <lmazzitelli@pm.me>
