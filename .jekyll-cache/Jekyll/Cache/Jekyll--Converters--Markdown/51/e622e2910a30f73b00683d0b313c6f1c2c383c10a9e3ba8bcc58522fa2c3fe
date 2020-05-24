@@ -1,0 +1,43 @@
+I"�<p>Here you will find a list of open source contributions that I made and also projects that I did (or helped to build). Sometimes for learning new technologies and sometimes just for fun.</p>
+
+<h3 id="personal-projects">Personal projects</h3>
+
+<ol>
+  <li><a href="http://www.chorichannel.com.ar">Chorichannel</a> - Based on your location, this webapp rates how good is the day to BBQ. Built in NodeJs, MongoDB, ExpressJs. - R.I.P.</li>
+  <li><a href="https://github.com/Coverboard">Coverboard</a> - Code Coverage metrics analysis. A Gem to add to your project and a display artifact. Built in RoR.</li>
+  <li><a href="https://github.com/mazzi/landing-generic">Landing Generic</a> - A generic landing page to capture email leads. NodeJs + MongoDB.</li>
+</ol>
+
+<h3 id="latest-open-source-contributions">Latest Open Source Contributions</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/dan-eyles/sculejs">Sculejs</a> - SculeJS (from Minuscule - pronounced skyul) is a fully featured DBMS written in JavaScript that emulates the functionality of MongoDB. It’s also much more than that; SculeJS includes implementations of many general purpose data structures that can be used by developers in their day-to-day work.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/mateodelnorte/forecast.io">forecast.io</a> - A simple wrapper for the awesome forecast.io (API: <a href="https://developer.forecast.io/docs/v2">https://developer.forecast.io/docs/v2</a>) written in NodeJS.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/phpredis/phpredis">PhpRedis</a> - The phpredis extension provides an API for communicating with the Redis key-value store. It is released under the PHP License, version 3.01. This code has been developed and maintained by Owlient from November 2009 to March 2011.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/dynmeth/node-nominatim">Nominatim</a> - Nominatim is a basic nodeJS module to handle geocoding and reverse geocoding via OpenStreetMap (OSM). It attempts to adhere to the Nominatim usage policy.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Coverboard">Coverboard</a> - Coverage metrics analysis. With two main components, Simplecov-Coverboard is gem that you can add to your RoR project and send metrics to the second component, Coverboard, to display metrics in real time. Developed during Helpling Hackaton 2015.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/coralproject/talk">The Coral Project</a> - The Coral Project improves community on news sites through open-source software. In particular Talk, that brings a better commenting experience.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/duckduckgo/duckduckgo-locales">DuckDuckGo</a> - The search engine that doesn’t track you.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/maidsafe">Maidsafe</a> - Providing Privacy, Security and Freedom.</p>
+  </li>
+</ol>
+
+<h3 id="and">And…</h3>
+
+<p>You can find more on my <a href="https://github.com/mazzi">Github account</a>.</p>
+:ET

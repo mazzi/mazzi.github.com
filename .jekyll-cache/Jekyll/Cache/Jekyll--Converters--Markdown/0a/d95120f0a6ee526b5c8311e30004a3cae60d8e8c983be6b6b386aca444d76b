@@ -1,0 +1,175 @@
+I"� <p>Has been a while without writing a technical post. Looking at startups I see often a webstack made out of Ruby on Rails (RoR) and React. With the facilities that RoR gives to create a REST API and the popularity of React, I understand the reasons.</p>
+
+<p>To make a small PoC, I decided to import a random CSV to sqlite3 (why bother to use mysql/postgres for this example right?) so I can build a small backend with a service to find information easily.</p>
+
+<p>Let’s start bottom up.</p>
+
+<h3 id="model-creation-and-importing-the-data">Model creation and importing the data</h3>
+
+<p>Download from <a href="https://opendata-ajuntament.barcelona.cat/data/en/dataset/est-padro-domicilis-sexe/resource/39106a1d-de6d-4fb1-a39c-261c472a7c8">this url</a> the file <code class="highlighter-rouge">2019_domicilis_sexe.csv</code>. It’s open data from Barcelona, identifiying “Homes of the city of Barcelona according to the sex of the people who live in them.” It’s just an example. Any other CSV file should be good as well, but you’ll need to change the mapping of the fields and the types.</p>
+
+<p>How to import this data into sqlite3 using Rails, and <a href="https://edgeguides.rubyonrails.org/active_record_migrations.html#migrations-and-seed-data">seeds</a>?</p>
+
+<ol>
+  <li>Copy <code class="highlighter-rouge">2019_domicilis_sexe.csv</code> into <code class="highlighter-rouge">./lib/seeds/</code> directory (if not exists create it)</li>
+  <li>
+    <p>Modify <code class="highlighter-rouge">./db/seeds.rb</code> and add the following code</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> require 'csv'
+
+ csv_text = File.read(Rails.root.join('lib', 'seeds', '2019_domicilis_sexe.csv'))
+ csv = CSV.parse(csv_text, :headers =&gt; true, :encoding =&gt; 'ISO-8859-1')
+ csv.each do |row|
+     sd = SexDatum.new
+     sd.year = row['Any']
+     sd.district_code = row['Codi_districte']
+     sd.district_name = row['Nom_districte']
+     sd.neighbourhood_code = row['Codi_barri']
+     sd.neighbourhood_name = row['Nom_barri']
+     sd.sex = row['Sexe']
+     sd.number = row['Nombre']
+        
+     sd.save
+     puts "Entry saved"
+ end
+</code></pre></div>    </div>
+  </li>
+  <li>Let’s create the model for this table using:
+     rails g model SexData year:integer district_code district_name neighbourhood_code:integer neighbourhood_name sex number:integer
+By default Rails uses <code class="highlighter-rouge">strings</code> as type for db fields. Just be explicit on <code class="highlighter-rouge">integers</code> on this case.</li>
+  <li>If the model was successfully created, you should see <code class="highlighter-rouge">./app/models/sex_datum.rb</code> on your filesystem. A migration then, should be executed for the creation of the table: <code class="highlighter-rouge">rake db:migrate</code>.</li>
+  <li>Now with the model, the csv data and the seeds, let’s import the data: <code class="highlighter-rouge">rake db:seed</code></li>
+  <li>To check that the model was created and the data imported, let’s use rails console: <code class="highlighter-rouge">rails c</code></li>
+  <li>Once there, let’s find records: <code class="highlighter-rouge">SexDatum.all</code> Check names, types and values. All set!</li>
+</ol>
+
+<h3 id="writing-the-controller-and-handling-the-routes">Writing the Controller and handling the routes</h3>
+
+<p>Let’s create the namespace for the routes, so we can handle versions in the future.</p>
+
+<ol>
+  <li>Create the directory <code class="highlighter-rouge">./controllers/api/v1/</code></li>
+  <li>
+    <p>And the file <code class="highlighter-rouge">sex_datum_controller.rb</code> in the same directory containing two methods: one to return all the records (just a test) and another one that will filter records by <code class="highlighter-rouge">district_code</code> (as an example)</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> class Api::V1::SexDatumController &lt; ApplicationController
+     def index
+         render json: SexDatum.all
+     end
+
+     def show
+         datum = SexDatum.where district_code:params[:id]
+         render json: datum
+     end
+ end
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Rewrite the contents (asumming that we have a project from scratch) of <code class="highlighter-rouge">routes.rb</code> so we can hit two urls
+<code class="highlighter-rouge">http://localhost:3000/</code> and <code class="highlighter-rouge">http://localhost:3000/api/v1/sex_datum/2</code>. The number 2 is the <code class="highlighter-rouge">district_code</code> and is just an example.</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Rails.application.routes.draw do
+     namespace :api do 
+         namespace :v1 do 
+             resources :sex_datum, only: [:index, :show]
+         end 
+     end 
+     root to: 'home#index'
+ end
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="writing-the-view-in-reactjs">Writing the View in React.js</h3>
+
+<ol>
+  <li>
+    <p>An empty file should be created in <code class="highlighter-rouge">./app/views/home/index.html.erb</code>. This file should act as a placeholder. The real content will be on <code class="highlighter-rouge">./app/javascript/components/App.jsx</code> served by webpack. Remember to install the gem and configure the path on <code class="highlighter-rouge">webpacker.yml</code> (sorry, maybe a long topic for the same post) The tile <code class="highlighter-rouge">App.jsx</code> will have the following content:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> import React from 'react'
+ import InputDistrictCode from './InputDistrictCode'
+
+ const App = () =&gt; {
+     return (
+         &lt;div&gt;
+             Hello, I am a react component rendered via rails webpacker
+             &lt;InputDistrictCode /&gt;
+         &lt;/div&gt;
+     )
+ }
+ export default App
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Now defining <code class="highlighter-rouge">InputDistrictCode.jsx</code></p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> import React, {Component} from 'react';
+ import Result from './Result';
+
+ class InputDistrictCode extends Component {
+
+     state = {
+         code : '',
+         result : [],
+     }
+
+     handleClick = (event) =&gt; {
+         event.preventDefault();
+         fetch(`http://localhost:3000/api/v1/sex_datum/${this.state.code}`)
+             .then(response =&gt; response.json())
+             .then(data =&gt; this.setState( {result : data}))
+     }
+
+     handleChange = (event) =&gt; {
+         const {name, value} = event.target
+         this.setState({ [name] : value })
+     }
+
+     render() {
+         return(
+             &lt;div&gt;
+                 &lt;input
+                     name='code'
+                     onChange={this.handleChange}&gt;
+                 &lt;/input&gt;
+                 &lt;button
+                     onClick={this.handleClick}&gt;
+                     Find it
+                 &lt;/button&gt;
+                 &lt;Result
+                     data={this.state.result} /&gt;
+             &lt;/div&gt;
+         )
+     }
+ }
+
+ export default InputDistrictCode;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>And the last component, <code class="highlighter-rouge">Result.jsx</code></p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> import React from 'react'
+
+ const Result = ({data}) =&gt; (
+     &lt;&gt;
+         {data.map( item =&gt; (
+             &lt;div key={item.id}&gt;
+             {item.district_name} - {item.id}
+             &lt;/div&gt;))}
+     &lt;/&gt;
+ )
+
+ export default Result;
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Run the rails server with <code class="highlighter-rouge">rails s</code> and the webpack sever <code class="highlighter-rouge">./bin/webpack-dev-server</code>. Heading now to <code class="highlighter-rouge">http://localhost:3000/</code> you should see something like this:</p>
+
+<p><img src="/images/2019/2019-08-07-form.png" alt="Simple form in React and RoR" class="center" /></p>
+
+<p>Writing an integer in the input field and then hitting the button, some results from the database will be retrieved.</p>
+
+<p>Hope it helps! If you need the code let me know in the comments.</p>
+:ET

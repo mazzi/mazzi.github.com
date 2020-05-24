@@ -1,0 +1,71 @@
+I"S<p>Searching on <a href="http://en.wikipedia.org/wiki/Internets">The Internets</a> about “How to configure one virtual host in nginx with multiple subdirs” I found a lot of different answers (mostly wrong or misconfigured) so I decided to write some (more) on my humble blog.</p>
+
+<p>What’s the objective of the configuration? Being able to serve different folders under the same virtual host.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>www.domain.com               == served in ==&gt;   /srv/htdocs/domain.com/
+www.domain.com/folder01/     == served in ==&gt;   /srv/htdocs/deployment01/
+www.domain.com/folder02/     == served in ==&gt;   /srv/htdocs/deployment02/
+</code></pre></div></div>
+
+<p>The most common solution for this scenario would be changing the <code class="highlighter-rouge">root</code> under different <code class="highlighter-rouge">location</code> directives. This could lead to different problems; especially knowing that Nginx processes virtual hosts configuration files from top to bottom. If some other location relies on the <code class="highlighter-rouge">root</code> value and we change it after the first definition we are not going to get the desired result (global variables anyone?).</p>
+
+<p>What’s the solution then? Using the <code class="highlighter-rouge">alias</code> directive.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server {
+    listen      80;
+    server_name www.domain.com;
+    root        /srv/htdocs/domain.com;
+    set         $alternate_folder01 /srv/htdocs/deployment01
+
+    location /
+    {
+       index index.html index.htm index.php;
+    }
+
+    location ~ /folder01/(.*)$
+    {
+        alias $alternate_folder01/index.php;
+
+        rewrite "^/folder01/(.*)$"      /folder01/index.php?$1;
+
+        include       /etc/nginx/fastcgi_params;
+
+        fastcgi_pass  127.0.0.1:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $request_filename;
+
+        break;
+    }
+</code></pre></div></div>
+
+<p>We also need to change the way that <code class="highlighter-rouge">fastcgi_parm SCRIPT_FILENAME</code> is called. It’s important to use <code class="highlighter-rouge">$request_filename</code> instead of <code class="highlighter-rouge">$document_root/$fastcgi_script_name</code> (It’s the most common error when using alias).</p>
+
+<p>In the example I used a variable called <code class="highlighter-rouge">$alternate_folder01</code>. This is the best way to keep the configuration modular and easy to read/configure if we have several sublocations added to that location later on.</p>
+
+<p>One of the best ways of debugging the variables (and other stuff) in Nginx is to install <a href="http://wiki.nginx.org/HttpEchoModule">HttpEchoModule</a>. It’s so easy to debug like doing this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 	location ~ /folder01/(.*)$
+    {
+        alias /srv/htdocs/deployment01/index.php;
+
+        rewrite "^/folder01/(.*)$"      /folder01/index.php?$1;
+
+        include       /etc/nginx/fastcgi_params;
+
+        fastcgi_pass  127.0.0.1:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $request_filename;
+
+        echo $uri
+
+        break;
+    }
+</code></pre></div></div>
+
+<p>To see the results it’s better to use <code class="highlighter-rouge">curl</code> instead of a normal browser (we get rid of caches, cookies, whatever). You’ll receive as an answer the $uri variable and also you are going to be sure where your request was processed.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://www.domain.com/folder01/
+</code></pre></div></div>
+
+<p>Probably you need to complile <code class="highlighter-rouge">HttpEchoModule</code> for Nginx (like I had to). But beleive me, it is worth it.</p>
+:ET
