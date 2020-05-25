@@ -16,6 +16,7 @@ You can reach me through the following means:
 2. [linkedin.com/lmazzitelli](https://www.linkedin.com/in/lmazzitelli)
 3. [github.com/mazzi](https://www.github.com/mazzi)
 4. [keybase.io/mazzi/](https://keybase.io/mazzi/)
+5. [GPG public key](https://mazzi.github.io/lmazzitelli.asc)
 
 Nope, [I don't have a Facebook account](http://edition.cnn.com/2013/02/25/opinion/rushkoff-why-im-quitting-facebook).
 
