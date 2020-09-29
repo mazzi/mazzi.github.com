@@ -30,6 +30,8 @@ Here you will find a list of open source contributions that I made and also proj
 
 8. [Maidsafe](https://github.com/maidsafe) - Providing Privacy, Security and Freedom.
 
+9. [Tartiflette](https://github.com/tartiflette/tartiflette) - Python GraphQL Engine.
+
 ### And...
 
 You can find more on my [Github account](https://github.com/mazzi).
