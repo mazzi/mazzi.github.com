@@ -67,7 +67,7 @@ div#top h1 a:hover {
 
 div#top ul#menu {
 	list-style: none;
-	float: right;
+	float: left;
 }
 
 div#top ul#menu li {
