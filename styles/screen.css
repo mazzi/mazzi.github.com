@@ -53,7 +53,8 @@ div#top a {
 }
 
 div#top h1 {
-	float: left;
+	display: block;
+	padding-left: 16px;
 }
 
 div#top h1 a {
@@ -67,7 +68,7 @@ div#top h1 a:hover {
 
 div#top ul#menu {
 	list-style: none;
-	float: left;
+	display: block;
 }
 
 div#top ul#menu li {
