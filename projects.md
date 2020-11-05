@@ -7,12 +7,15 @@ Here you will find a list of open source contributions that I made and also proj
 
 ### Personal projects
 
-
 1. [Chorichannel](http://www.chorichannel.com.ar) - Based on your location, this webapp rates how good is the day to BBQ. Built in NodeJs, MongoDB, ExpressJs. - R.I.P.
 2. [Coverboard](https://github.com/Coverboard) - Code Coverage metrics analysis. A Gem to add to your project and a display artifact. Built in RoR.
 3. [Landing Generic](https://github.com/mazzi/landing-generic) - A generic landing page to capture email leads. NodeJs + MongoDB.
+4. [Keithfem bot](https://github.com/mazzi/keithfembot) - A Telegram bot for (Keith F'em)[https://www.keithfem.com/]. Displays radio shows schedule and other goodies.
+
 
 ### Latest Open Source Contributions
+
+Ordered from older to more recent.
 
 1. [Sculejs](https://github.com/dan-eyles/sculejs) - SculeJS (from Minuscule - pronounced skyul) is a fully featured DBMS written in JavaScript that emulates the functionality of MongoDB. It's also much more than that; SculeJS includes implementations of many general purpose data structures that can be used by developers in their day-to-day work.
 
@@ -34,4 +37,4 @@ Here you will find a list of open source contributions that I made and also proj
 
 ### And...
 
-You can find more on my [Github account](https://github.com/mazzi).
+You can find more bugs and spaghetti code on my [Github account](https://github.com/mazzi).
