@@ -34,6 +34,8 @@ Ordered from older to more recent.
 
 9. [Tartiflette](https://github.com/tartiflette/tartiflette) - Python GraphQL Engine.
 
+10. [Grafanalib](https://github.com/weaveworks/grafanalib/) - Python Grafana library.
+
 ### And...
 
 You can find more bugs and spaghetti code on my [Github account](https://github.com/mazzi).
