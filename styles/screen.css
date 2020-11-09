@@ -54,6 +54,8 @@ div#top a {
 
 div#top h1 {
 	display: block;
+        margin: auto;
+        max-width: 800px;
 }
 
 div#top h1 a {
@@ -68,6 +70,8 @@ div#top h1 a:hover {
 div#top ul#menu {
 	list-style: none;
 	display: block;
+        margin: auto;
+        max-width: 800px;
 }
 
 div#top ul#menu li {
