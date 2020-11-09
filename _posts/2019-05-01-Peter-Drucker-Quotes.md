@@ -4,7 +4,7 @@ title: Peter Drucker quotes
 tags: [quotes]
 ---
 
-Peter Ferdinand Drucker was an Austrian-born American management consultant, educator, and author, 
+Peter Ferdinand Drucker was an Austrian-born American management consultant, educator, and author,
 whose writings contributed to the philosophical and practical foundations of the modern business corporation.
 
 Here 10 quotes to keep in mind regularly.
@@ -21,7 +21,7 @@ Here 10 quotes to keep in mind regularly.
 
 > So much of what we call management consists of making it difficult for people to work.
 
-> People who don't take risks generally make about two big mistakes a year. People who do take risks generally make make about two big mistakes a year.
+> People who don't take risks generally make about two big mistakes a year. People who do take riswks generally make about two big mistakes a year.
 
 > Meetings are by definition a concession to a deficient organization. For one either meets or one works. One cannot do both at the same time.
 
