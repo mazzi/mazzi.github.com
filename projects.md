@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects and contributions
+title: Open source contributions and personal projects.
 ---
 
 Here you will find a list of open source contributions that I made and also projects that I did (or helped to build). Sometimes for learning new technologies and sometimes just for fun.
@@ -38,4 +38,4 @@ Ordered from older to more recent.
 
 ### And...
 
-You can find more bugs and spaghetti code on my [Github account](https://github.com/mazzi).
+You can find more 🐛  and 🍝 code on my [Github account](https://github.com/mazzi).

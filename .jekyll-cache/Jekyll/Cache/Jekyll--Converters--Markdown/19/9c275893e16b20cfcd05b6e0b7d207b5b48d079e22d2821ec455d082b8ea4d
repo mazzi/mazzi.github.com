@@ -1,15 +1,15 @@
-I"�<p>This post is kind of a “copy paste memo” to myself. Oldies but goldies.</p>
+I"4<p>This post is kind of a “copy paste memo” to myself. Oldies but goldies.</p>
 
-<p>How to check a <code class="highlighter-rouge">my.cnf</code> file syntax without restarting the service?</p>
+<p>How to check a <code class="language-plaintext highlighter-rouge">my.cnf</code> file syntax without restarting the service?</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo /opt/mysql/server-5.6/bin/mysqld --help --verbose --skip-networking --pid-file=/tmp/deleteme.pid 1&gt;/dev/null
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo /opt/mysql/server-5.6/bin/mysqld --help --verbose --skip-networking --pid-file=/tmp/deleteme.pid 1&gt;/dev/null
 </code></pre></div></div>
 
 <p>All the things that appear in the console are useful (of course, syntax errors included).</p>
 
 <p>From mysql 5.6, the syntax to log slow queries and queries that perform full table scans (bad for performance!) changed. Here they are the new options.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[mysqld]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[mysqld]
 slow-query-log = ON
 slow_query_log_file = /var/log/mysql/mysql-slow.log
 long_query_time = 10
@@ -20,20 +20,20 @@ log_queries_not_using_indexes = ON
 
 <p>This settings can also be changed without restarting the service in mysql versions bigger than 5.3 (you probably want to do that on a live system). To do that, execute the following commands using a mysql client.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SET @@GLOBAL.long_query_time=1;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SET @@GLOBAL.long_query_time=1;
 SET @@GLOBAL.log_queries_not_using_indexes = 'ON';
 SET @@GLOBAL.slow_query_log_file ='/var/log/mysql/slow-query.log';
 </code></pre></div></div>
 
 <p>To check that the settings that we just changed have succeeded:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SHOW GLOBAL VARIABLES LIKE "%slow%";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SHOW GLOBAL VARIABLES LIKE "%slow%";
 SHOW GLOBAL VARIABLES LIKE "%long%";
 </code></pre></div></div>
 
 <p>Finally, the log is being activated.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SET @@GLOBAL.slow_query_log = 'ON';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SET @@GLOBAL.slow_query_log = 'ON';
 </code></pre></div></div>
 
 <p>How to analyze and optimize SQL queries is a subject for another post ;)</p>

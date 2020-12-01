@@ -1,4 +1,4 @@
-I"�<p>As part of the infrastructure at work, we use <a href="http://haproxy.1wt.euh">Haproxy</a> as a load balancer and <a href="http://nginx.org/">Nginx</a> as webserver. Here is a nice layout made with <a href="http://www.gliffy.com">Gliffy</a></p>
+I"�<p>As part of the infrastructure at work, we use <a href="http://haproxy.1wt.euh">Haproxy</a> as a load balancer and <a href="http://nginx.org/">Nginx</a> as webserver. Here is a nice layout made with <a href="http://www.gliffy.com">Gliffy</a></p>
 
 <p><img src="/images/2013/haproxy.png" alt="Network Layout" class="center" /></p>
 
@@ -6,7 +6,7 @@
 
 <p>The latest version of Haproxy (1.5-dev18) supports native SSL. It’s not an stable version but does the trick. Following a configuration example.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listen  https_server
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listen  https_server
     bind            127.0.0.1:443 ssl crt /etc/haproxy/ssl
     mode            http
     balance         source
@@ -17,11 +17,11 @@
     option          originalto
 </code></pre></div></div>
 
-<p>In the folder <code class="highlighter-rouge">/etc/haproxy/ssl</code> we need to copy all of our certificates. Alternatively you can use a specific certificate. To be able to analyze HTTP headers the key here is to specify <code class="highlighter-rouge">mode http</code>. If we use <code class="highlighter-rouge">mode tcp</code> (like in a standard https configuration for Haproxy) we are not able to analyze the headers. You must take a peek at the OSI layer model to understand why.</p>
+<p>In the folder <code class="language-plaintext highlighter-rouge">/etc/haproxy/ssl</code> we need to copy all of our certificates. Alternatively you can use a specific certificate. To be able to analyze HTTP headers the key here is to specify <code class="language-plaintext highlighter-rouge">mode http</code>. If we use <code class="language-plaintext highlighter-rouge">mode tcp</code> (like in a standard https configuration for Haproxy) we are not able to analyze the headers. You must take a peek at the OSI layer model to understand why.</p>
 
-<p>Regarding the balancing, it’s quick and easy to configure Haproxy using the <code class="highlighter-rouge">listen</code> directive instead of <code class="highlighter-rouge">backend</code> and <code class="highlighter-rouge">fronted</code> ones. Here’s the rest of the configuration in the <code class="highlighter-rouge">listen https_server</code>.</p>
+<p>Regarding the balancing, it’s quick and easy to configure Haproxy using the <code class="language-plaintext highlighter-rouge">listen</code> directive instead of <code class="language-plaintext highlighter-rouge">backend</code> and <code class="language-plaintext highlighter-rouge">fronted</code> ones. Here’s the rest of the configuration in the <code class="language-plaintext highlighter-rouge">listen https_server</code>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # Routing for operation with files
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # Routing for operation with files
     acl             path01  path_reg        ^/api/upload/(.*)$
     acl             path02  path_reg        ^/api/download/(.*)$
     use-server      srv01 if path01 or path02
@@ -30,16 +30,16 @@
     server          srv02 192.168.0.2:8080 weight 1 maxconn 1000 check inter 10000 rise 1 fall 2
 </code></pre></div></div>
 
-<p>It’s important not to include <code class="highlighter-rouge">option ssl-hello-chk</code> to this configuration because if we do so, haproxy will consider them down because of the <code class="highlighter-rouge">rise</code> and <code class="highlighter-rouge">fall</code> directives. Haproxy will not be able to receive an answer status because we are checking HTTP servers instead of HTTPS.</p>
+<p>It’s important not to include <code class="language-plaintext highlighter-rouge">option ssl-hello-chk</code> to this configuration because if we do so, haproxy will consider them down because of the <code class="language-plaintext highlighter-rouge">rise</code> and <code class="language-plaintext highlighter-rouge">fall</code> directives. Haproxy will not be able to receive an answer status because we are checking HTTP servers instead of HTTPS.</p>
 
-<p>The <code class="highlighter-rouge">path_reg</code> directive is not the optimum regarding speed, but it depends on how many requests per second we need to analyze.</p>
+<p>The <code class="language-plaintext highlighter-rouge">path_reg</code> directive is not the optimum regarding speed, but it depends on how many requests per second we need to analyze.</p>
 
 <p>For automatic redirection to HTTPS we need to specify another listen directive in Haproxy.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listen  http_server     127.0.0.1:80
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listen  http_server     127.0.0.1:80
     	redirect scheme https if !{ ssl_fc }
 </code></pre></div></div>
 
-<p>Last but not least, it’s important to know that the webservers are now listening for incoming traffic in a non secure way (HTTP). If it’s going to receive only requests from Haproxy maybe is a good idea to use the <code class="highlighter-rouge">allow</code> and <code class="highlighter-rouge">deny all</code> directives.</p>
+<p>Last but not least, it’s important to know that the webservers are now listening for incoming traffic in a non secure way (HTTP). If it’s going to receive only requests from Haproxy maybe is a good idea to use the <code class="language-plaintext highlighter-rouge">allow</code> and <code class="language-plaintext highlighter-rouge">deny all</code> directives.</p>
 
 :ET

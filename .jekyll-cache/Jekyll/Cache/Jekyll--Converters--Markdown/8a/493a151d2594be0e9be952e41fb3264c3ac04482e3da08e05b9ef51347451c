@@ -1,18 +1,18 @@
-I"<p>Installing a project from a friend made with Rails I figured out that was using <a href="http://www.postgresql.org/">postgres</a> and I didn’t have it installed on my OSX. I found a couple of problems that I’ll describe here (and how to solve them of course).</p>
+I"�<p>Installing a project from a friend made with Rails I figured out that was using <a href="http://www.postgresql.org/">postgres</a> and I didn’t have it installed on my OSX. I found a couple of problems that I’ll describe here (and how to solve them of course).</p>
 
 <p>First of all, to install postgres using brew:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install postgres
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install postgres
 </code></pre></div></div>
 
 <p>After the installation, is a good idea to create the first database</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>initdb /usr/local/var/postgres
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>initdb /usr/local/var/postgres
 </code></pre></div></div>
 
 <p>Usually on default installations of OSX the following error appears:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>creating template1 database in /usr/local/var/postgres ...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>creating template1 database in /usr/local/var/postgres ...
 FATAL: could not create shared memory segment: Cannot allocate memory
 DETAIL: Failed system call was shmget(key=1, size=1318912, 03600).
 HINT: This error usually means that PostgreSQL's request for a shared memory segment exceeded 
@@ -27,12 +27,12 @@ initdb: removing contents of data directory "data"
 
 <p>Try executing this command to check your settings:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sysctl -a
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sysctl -a
 </code></pre></div></div>
 
 <p>You can configure this by modifying kernel parameters, running the following as root:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sysctl -w kern.sysv.shmmax=1610612736
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sysctl -w kern.sysv.shmmax=1610612736
 sysctl -w kern.sysv.shmmin=1
 sysctl -w kern.sysv.shmmni=32
 sysctl -w kern.sysv.shmseg=8
@@ -41,18 +41,18 @@ sysctl -w kern.maxprocperuid=512
 sysctl -w kern.maxproc=2048
 </code></pre></div></div>
 
-<p>Or adding the kern.* parameters to <code class="highlighter-rouge">/etc/sysctrl.conf</code> permanently. You can find some related information <a href="http://support.apple.com/kb/HT4022">in the apple knowledge base</a>.</p>
+<p>Or adding the kern.* parameters to <code class="language-plaintext highlighter-rouge">/etc/sysctrl.conf</code> permanently. You can find some related information <a href="http://support.apple.com/kb/HT4022">in the apple knowledge base</a>.</p>
 
 <p>You need to reboot to reflect the changes.</p>
 
 <p>Now after executing again the database creation command everything should be ok. Nice moment then to create a new user.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>createuser --interactive postgres
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>createuser --interactive postgres
 </code></pre></div></div>
 
 <p>Another alternative command to create a databse could be the following:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>createdb -Opostgres -Eutf8 db_development
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>createdb -Opostgres -Eutf8 db_development
 </code></pre></div></div>
 
 <p>More on postgres on the following posts…</p>

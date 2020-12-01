@@ -6,24 +6,9 @@
 }
 
 body {
-	background: #FDFDFD;
+    background-color: cornsilk;
 	color: #34495E;
-	font-family: 'Noto Serif SC', serif;
-	font-size: 1.3em;
-}
-
-body.night-mode,
-body.night-mode h2,
-body.night-mode h2 a {
-  background: rgb(0, 0, 0);
-  color: #FDFDFD;
-}
-
-body.night-mode div#content h2 a {
-	color: #973C3F;
-}
-body.night-mode div#content h2 a:hover {
-	color: white;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -33,103 +18,48 @@ a {
 
 a:hover {
 	text-decoration: none;
+	opacity: 0.8;
 }
 
+/******* Landing *******/
 
-/****** Header ******/
-div#top {
-	background: #973C3F;
-	border-bottom: 1px #aaa;
-	font-size: 1em;
-	line-height: 2em;
-	text-transform: uppercase;
-	padding: 0 10% 0 10%;
+div#menu {
+    text-align: center;
+    margin: 0px;
 }
 
-div#top a {
-	text-decoration: none;
-	color: #FDFDFD;
-	text-shadow: 2px 2px #000;
+div#menu ul {
+    list-style: none;
 }
 
-div#top h1 {
-	display: block;
-        margin: auto;
-        max-width: 800px;
+div#menu li {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
 }
 
-div#top h1 a {
-	display: block;
-	padding: 6px 16px 6px 0;
+div#menu a {
+    text-decoration: none;
+    font-size: 15em;
+    font-weight: bolder;
+    color: brown;
 }
 
-div#top h1 a:hover {
-	text-decoration: underline;
+div#menu p {
+    text-decoration: none;
+    color: black;
+    font-size: 3em;
+    font-weight: normal;
 }
-
-div#top ul#menu {
-	list-style: none;
-	display: block;
-        margin: auto;
-        max-width: 800px;
-}
-
-div#top ul#menu li {
-	float: left;
-}
-
-div#top ul#menu li a {
-	display: block;
-	padding: 6px 16px;
-	border-left: 1px #aaa;
-}
-
-div#top ul#menu li a:hover {
-	text-decoration: underline;
-}
-
-div#top ul#menu li.feed a img {
-	position: relative;
-	top: 3px;
-}
-
-.night-mode-switch input[type="checkbox"] {
-	display: none;
-}
-.night-mode-switch label {
-	cursor: pointer;
-}
-
-.night-mode-switch input[type="checkbox"] + label {
-	display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-	height: 20px;
-	margin-top: 8px;
-	background: url('../images/contrast-button.svg') 0px center no-repeat;
-}
-
-.night-mode-switch input[type="checkbox"]:checked + label {
-	display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-	height: 20px;
-	margin-top: 8px;
-	background: url('../images/contrast-button.svg') 0px center no-repeat;
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
-	-ms-transform: rotate(180deg);
-	-o-transform: rotate(180deg);
-	transform: rotate(180deg);
-}
-
 
 /******* Main ******/
 div#main {
-	
 	padding: 0 10% 0 10%;
-	margin:auto;
-	max-width: 800px;
+	margin: auto;
+	max-width: 75ch;
+	font-size: 1.5em;
 }
 
 div#content {
@@ -140,7 +70,7 @@ div#content {
 div#content h2 {
 	margin-bottom: 24px;
 	font-size: 1.5em;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 div#content h2 a {
@@ -159,7 +89,7 @@ div#content h2 span.date {
 div#content h3 {
 	margin: 32px 0 16px 0;
 	font-size: 1.5em;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 
@@ -288,24 +218,8 @@ div#content div.pagination span a:hover {
 	color: #fff;
 }
 
-
-/****** Footer ******/
-div#footer {
-	clear: both;
-	border-top: 1px;
-	padding: 2em;
-	font-size: 0.6em;
-	background: #bdc1c5;
-	padding-left: 20%;
-}
-
-div#footer p {
-	margin: 0;
-	line-height: 1em;
-}
-
-div#footer p a {
-	color: #000;
+div#back {
+	margin-bottom: 5%;
 }
 
 /****** Common stuff... ******/

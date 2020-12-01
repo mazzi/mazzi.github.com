@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Archive
+title: From time to time I write on this site. Not very often.
 ---
 
-If you are tired of pagination, you can find here all the posts on this blog.
+I used to write some posts (remember blogs?). Took me some time, so I decided to keep them here instead of deleting.
+
+You can find some technical posts, and lately some posts about soft skills.
 
 <ul>
   {% for post in site.posts %}
@@ -12,3 +14,6 @@ If you are tired of pagination, you can find here all the posts on this blog.
     </li>
   {% endfor %}
 </ul>
+
+
+You can also add to your [atom feed](/atom.xml).

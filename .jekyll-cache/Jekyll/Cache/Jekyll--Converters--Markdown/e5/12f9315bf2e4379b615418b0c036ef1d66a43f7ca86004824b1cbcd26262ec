@@ -1,4 +1,4 @@
-I"R	<p>To improve speed of our sites (or scripts) we need to detect bottlenecks. How we can accomplish that? profiling. What’s profiling? It’s form of dynamic programing that analyzes and measures different aspects of software like memory usage, time, cyclomatic complexity, usage of functions and other useful metrics. Without metrics we cannot see improvement.</p>
+I"e	<p>To improve speed of our sites (or scripts) we need to detect bottlenecks. How we can accomplish that? profiling. What’s profiling? It’s form of dynamic programing that analyzes and measures different aspects of software like memory usage, time, cyclomatic complexity, usage of functions and other useful metrics. Without metrics we cannot see improvement.</p>
 
 <p>As a long time user of Zend extension Xdebug I wanted to try something different. With a little bit of research I found Facebook Zend extension XHprof and I must say that is an excellent tool.</p>
 
@@ -6,7 +6,7 @@
 
 <p>What’s next then? Just configure your application to load the extension if it’s available. Something like this…</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if ( extension_loaded ( 'xhprof' ) )
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if ( extension_loaded ( 'xhprof' ) )
 {
 	include_once '/usr/share/php/xhprof_lib/utils/xhprof_runs.php';
 	include_once '/usr/share/php/xhprof_lib/utils/xhprof_lib.php';
