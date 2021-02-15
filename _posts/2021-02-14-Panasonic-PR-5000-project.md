@@ -15,27 +15,27 @@ Looks like "PR" stands for Professional Racing. Here's the team with the PR-6000
 I've decided to write a bit to keep a log on the steps that I will take to bring it back in good shape.
 
 # Checklist
--[ ] Wheelset:
--[ ] Hubs and bearings
--[ ] Tyres + alignment
+## Wheelset:
+- Hubs and bearings
+- Tyres + alignment
 
--[ ] Frame:
--[ ] Seat & Seatpost
--[ ] Cockpit
--[ ] Frame itself
+## Frame:
+- Seat & Seatpost
+- Cockpit
+- Frame itself
 
--[ ] Transmission:
--[ ] Rear derallieur
--[ ] Front derallieur
--[ ] Cables & levers
--[ ] Chain
--[ ] Cog
--[ ] Bottom Bracket
--[ ] Crankset
--[ ] Pedals
+## Transmission:
+- Rear derallieur
+- Front derallieur
+- Cables & levers
+- Chain
+- Cog
+- Bottom Bracket
+- Crankset
+- Pedals
 
--[ ] Brakes:
--[ ] Front/Rear
--[ ] Cables/Housing
+- Brakes:
+- Front/Rear
+- Cables/Housing
 
 Even found [how they were made in Japan](https://www.youtube.com/watch?v=rfAbZlqQ68o). High tech stuff!
