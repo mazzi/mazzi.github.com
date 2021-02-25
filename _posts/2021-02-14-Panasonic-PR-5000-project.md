@@ -8,7 +8,7 @@ Just got my hands on a beautiful Panasonic PR-5000 (size 56). So far seems 100% 
 
 <img src="/images/2021/2021-02-14-Pana18800.webp" alt="PR 5000 catalog" class="center" width="500px"/>
 
-The tubbing is Tange Cr-Mo. The body has some stickers and seems that was bought on a German speaking store called "Marty". In the front tube has a serial number engraved. Nothing on the bottom bracket. Also has a registration number in the seatpost. I wander how this bike arrived to Spain.
+The tubing is Tange Cr-Mo. The body has some stickers and seems that was bought on a German speaking store called "Marty". In the front tube has a serial number engraved. Nothing on the bottom bracket. Also has a registration number in the seatpost. I wander how this bike arrived to Spain.
 
 
 Looks like "PR" stands for Professional Racing. Here's the team with the PR-6000.
