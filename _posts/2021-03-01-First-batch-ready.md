@@ -11,11 +11,17 @@ No many surprises so far: seatpost and stem are not stuck; Shimano 600 tricolor 
 Started by dissasembling brakes (beatiful I must say), cables and the transmission. They are already dissasembled/degreased, cleaned, assembled/greased again. Same with the cable housings. I got a new set of cables (transmission/brakes) that they were totally destroyed.
 
 ~~Front/Rear~~
+
 ~~Cables/Housing~~
+
 ~~Rear derallieur~~
+
 ~~Front derallieur~~
+
 ~~Cables & levers~~
+
 ~~Chain~~
+
 ~~Cog~~
 
 Pretty useful the [Shimano website](https://si.shimano.com/#/) to find all the parts and pieces of each component. In this case, the rear derallieur
@@ -24,7 +30,7 @@ Pretty useful the [Shimano website](https://si.shimano.com/#/) to find all the p
 
 I was not able to take out the pedals. They are pretty stuck and I don't have enough leverage with my tools. I'll see what I can do. Same with crackset.
 
-The brake handles rubber housings were removed. They were pretty dirty, but a good clean up with detergent and as next step with CIF will do the job. I've tried to get replacements, but they are really hard to find and specially in white.
+The brake handles rubber housings were removed. They were pretty dirty, but a good clean up with detergent made the first part of the job. Next one will be with CIF. Pretty good for rubber. I've tried to get replacements, but they are really hard to find and specially in white.
 
 Next stop: probably the wheelset to check aligment, cones, bearigns, inner tubes and tyres. That could be a couple of mornings (need to go out and cycle too).
 
