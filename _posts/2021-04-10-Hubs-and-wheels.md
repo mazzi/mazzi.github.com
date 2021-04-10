@@ -14,6 +14,7 @@ More diagrams from the [Shimano website](https://si.shimano.com/#/).
 The wheels look aligned. Until the last stage of the build, I will keep the Vittoria tyres to move the bike around. Nevertheless, pretty hard to get new tyres online nowadays. Looking for new 700x23c gum wall.
 
 ~~Hubs and bearings~~
+
 ~~Tyres + alignment~~
 
 Got a new set of long allen keys to dissasemble the cockpit. Pretty nice system from Shimano to hide bolts.
