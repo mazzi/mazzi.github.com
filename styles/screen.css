@@ -54,6 +54,12 @@ div#menu p {
     font-weight: normal;
 }
 
+div#visits {
+	font-size: xx-small;
+	color: lightgray;
+	text-align: right;
+}
+
 /******* Main ******/
 div#main {
 	padding: 0 10% 0 10%;
