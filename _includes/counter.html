@@ -1,0 +1,7 @@
+    <script>
+        function cb(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/mazzi.github.com/visits?callback=cb"></script>
+    <div id="visits"></div>
