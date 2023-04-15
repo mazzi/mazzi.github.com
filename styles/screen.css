@@ -6,9 +6,9 @@
 }
 
 body {
-    background-color: cornsilk;
-	color: #34495E;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffec7d;
+	color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -62,10 +62,10 @@ div#visits {
 
 /******* Main ******/
 div#main {
-	padding: 0 10% 0 10%;
+	padding: 0 20% 0 20%;
 	margin: auto;
 	max-width: 75ch;
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 div#content {
