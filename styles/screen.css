@@ -232,3 +232,13 @@ div#back {
 .clear {
 	clear: both;
 }
+
+
+figcaption {
+    font-size: small;
+    text-align: right;
+}
+
+figure.image {
+    margin-bottom: 1em;
+}
