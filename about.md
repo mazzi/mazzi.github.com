@@ -8,8 +8,8 @@ Team player in different roles. Developer, Coach, Facilitator, Public Speaker, U
 
 {% include image.html url="/images/hi.jpg" alt="Hi!" description="Lago Puelo, Chubut, Argentina - 2016" %}
 
-Most of the projects that I worked on in my professional carreer can be read in my
-[linkedin profile](http://www.linkedin.com/in/lmazzitelli), found on this blog or in [my github profile](https://www.github.com/mazzi). Regarding code, most of what I produced is owned by my previous employers and unfortunatly it's not open source (in fact, it's private code). Still you can find [projects or contributions that I worked on](https://mazzi.github.io/projects.html) on this site.
+Most of the projects that I worked on in my professional career can be read in my
+[linkedin profile](http://www.linkedin.com/in/lmazzitelli), found on this blog or in [my github profile](https://www.github.com/mazzi). Regarding code, most of what I produced is owned by my previous employers and unfortunately it's not open source (in fact, it's private code). Still you can find [projects or contributions that I worked on](https://mazzi.github.io/projects.html) on this site.
 
 I've worked on different languages, database engines and technologies. _It's the indian, not the arrow._
 
@@ -20,8 +20,6 @@ You can get in touch using one of these:
 3. [github.com/mazzi](https://www.github.com/mazzi)
 4. [keybase.io/mazzi](https://keybase.io/mazzi)
 5. [GPG public key](./lmazzitelli.asc).
-
-[I don't have a Facebook account](http://edition.cnn.com/2013/02/25/opinion/rushkoff-why-im-quitting-facebook). It's a pretty old article (2013). Nowadays you can find a lot more reasons about not having a Facebook account.
 
 Besides 💻, I like 🍃, 🧗‍♂️, ⛰️, [🎶](http://www.keithfem.com), 🚴‍♂️, 🛠️ and learning new things.
 
