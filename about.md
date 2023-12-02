@@ -6,7 +6,7 @@ title: Who am I? What is this site?
 Hi, my name is Lautaro Mazzitelli and I'm a Software Engineer.
 Team player in different roles. Developer, Coach, Facilitator, Public Speaker, University Teacher, Product person.
 
-![Hi](/images/hi.jpg)
+{% include image.html url="/images/hi.jpg" alt="Hi!" description="Lago Puelo, Chubut, Argentina - 2016" %}
 
 Most of the projects that I worked on in my professional carreer can be read in my
 [linkedin profile](http://www.linkedin.com/in/lmazzitelli), found on this blog or in [my github profile](https://www.github.com/mazzi). Regarding code, most of what I produced is owned by my previous employers and unfortunatly it's not open source (in fact, it's private code). Still you can find [projects or contributions that I worked on](https://mazzi.github.io/projects.html) on this site.
