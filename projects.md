@@ -7,11 +7,12 @@ Here you will find a list of open source contributions that I made and also proj
 
 ### Personal projects
 
-1. ~~[Chorichannel](http://www.chorichannel.com.ar) - Based on your location, this webapp rates how good is the day to BBQ. Built in NodeJs, MongoDB, ExpressJs.~~ - R.I.P.
-2. [Coverboard](https://github.com/Coverboard) - Code Coverage metrics analysis. A Gem to add to your project and a display artifact. Built in RoR.
-3. [Landing Generic](https://github.com/mazzi/landing-generic) - A generic landing page to capture email leads. NodeJs + MongoDB.
-4. [Keithfem bot](https://github.com/mazzi/keithfembot) - A Telegram bot for [Keith F'em](https://www.keithfem.com/), a community radio experiment. Displays radio shows schedule and other goodies.
-5. [Craigshot](https://github.com/mazzi/craigshot) - A small python script to post a screenshot (meant for craiglist) of a url in tumblr.
+1. [Craigshot](https://github.com/mazzi/craigshot) - A small python script to post a screenshot (meant for craiglist) of a url in tumblr.
+2. ~~[Chorichannel](http://www.chorichannel.com.ar) - Based on your location, this webapp rates how good is the day to BBQ. Built in NodeJs, MongoDB, ExpressJs.~~ - R.I.P.
+3. [Coverboard](https://github.com/Coverboard) - Code Coverage metrics analysis. A Gem to add to your project and a display artifact. Built in RoR.
+4. [Landing Generic](https://github.com/mazzi/landing-generic) - A generic landing page to capture email leads. NodeJs + MongoDB.
+5. [Keithfem bot](https://github.com/mazzi/keithfembot) - A Telegram bot for [Keith F'em](https://www.keithfem.com/), a community radio experiment. Displays radio shows schedule and other goodies.
+6. [Alfa-Mogal](https://tulip-incandescent-wannanosaurus.glitch.me/) - A random name generator (yes, another one) based on made up words from [Miguel Tomasín](https://es.wikipedia.org/wiki/Reynols).
 
 ### Latest Open Source Contributions
 
