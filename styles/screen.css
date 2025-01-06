@@ -1,18 +1,16 @@
-@import   url(https://fonts.googleapis.com/css?family=Noto+Serif+SC);
-
 * {
 	margin: 0;
 	padding: 0;
 }
 
 body {
-    background-color: #ffec7d;
-	color: #000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+	color: black;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 a {
-	color: #973C3F;
+	color: blue;
 	text-decoration: underline;
 }
 
@@ -32,25 +30,26 @@ div#menu ul {
     list-style: none;
 }
 
-div#menu li {
+/* div#menu li {
     transform: rotate(-10deg);
     -webkit-transform: rotate(-10deg);
     -moz-transform: rotate(-10deg);
     -ms-transform: rotate(-10deg);
     -o-transform: rotate(-10deg);
-}
+} */
 
 div#menu a {
     text-decoration: none;
-    font-size: 15em;
+    text-transform: uppercase;
+    font-size: 10em;
     font-weight: bolder;
-    color: brown;
+    color: black;
 }
 
 div#menu p {
     text-decoration: none;
     color: black;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: normal;
 }
 
@@ -65,7 +64,7 @@ div#main {
 	padding: 0 20% 0 20%;
 	margin: auto;
 	max-width: 75ch;
-	font-size: 1.3em;
+	font-size: 1.1em;
 }
 
 div#content {
@@ -75,7 +74,7 @@ div#content {
 
 div#content h2 {
 	margin-bottom: 24px;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	font-weight: bold;
 }
 
@@ -94,7 +93,7 @@ div#content h2 span.date {
 
 div#content h3 {
 	margin: 32px 0 16px 0;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	font-weight: bold;
 }
 
@@ -107,6 +106,7 @@ div.post img {
 	display: block;
 	max-width: 100%;
 	margin: 0 auto 16px auto;
+    border: 5px solid black;
 }
 div.post .right {
 	display: inline-block;
@@ -155,7 +155,7 @@ div.post ul, div.post ol {
 div.post blockquote {
 	margin-bottom: 16px;
 	padding: 16px 16px 1px 16px;
-	background: #95A5A6;
+	background: #242424;
 	color: #fff;
 	border-radius: 3px;
 }
