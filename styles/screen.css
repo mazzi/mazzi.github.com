@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: rgb(255,247,244);
 	color: black;
     font-family: "IBM Plex Mono", monospace;
 }
@@ -26,17 +26,15 @@ div#menu {
     margin: 0px;
 }
 
+@media only screen and (max-width: 1000px) {
+    div#menu {
+        padding-top: 10%;
+    }
+}
+
 div#menu ul {
     list-style: none;
 }
-
-/* div#menu li {
-    transform: rotate(-10deg);
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-} */
 
 div#menu a {
     text-decoration: none;
@@ -53,18 +51,20 @@ div#menu p {
     font-weight: normal;
 }
 
-div#visits {
-	font-size: xx-small;
-	color: lightgray;
-	text-align: right;
-}
 
 /******* Main ******/
 div#main {
-	padding: 0 20% 0 20%;
+    padding: 0 30% 0 30%;
 	margin: auto;
-	max-width: 75ch;
-	font-size: 1.1em;
+	font-size: larger;
+    font-family: Editor, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+}
+
+@media only screen and (max-width: 1000px) {
+    div#main {
+        padding: 0 10% 0 10%;
+        font-size: xx-large;
+    }
 }
 
 div#content {
