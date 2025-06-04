@@ -56,8 +56,8 @@ div#menu p {
 div#main {
     padding: 0 30% 0 30%;
 	margin: auto;
-	font-size: larger;
-    font-family: Editor, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+	font-size: small;
+    font-family: "Menlo", "Meslo LG", monospace;
 }
 
 @media only screen and (max-width: 1000px) {
