@@ -7,12 +7,15 @@ Here you will find a list of open source contributions that I made and also proj
 
 ### Personal projects
 
-1. [Craigshot](https://github.com/mazzi/craigshot) - A small python script to post a screenshot (meant for craiglist) of a url in tumblr.
-2. ~~[Chorichannel](http://www.chorichannel.com.ar) - Based on your location, this webapp rates how good is the day to BBQ. Built in NodeJs, MongoDB, ExpressJs.~~ - R.I.P.
-3. [Coverboard](https://github.com/Coverboard) - Code Coverage metrics analysis. A Gem to add to your project and a display artifact. Built in RoR.
+Most recent first.
+
+1. Chaos App - WIP - A react-native app that blends structure and spontaneity, letting you plan your days without the pressure of rigid schedules.
+2. [Alfa-Mogal](https://tulip-incandescent-wannanosaurus.glitch.me/) - A random name generator (yes, another one) based on made up words from [Miguel Tomasín](https://es.wikipedia.org/wiki/Reynols).
+3. [Keithfem bot](https://github.com/mazzi/keithfembot) - A Telegram bot for [Keith F'em](https://www.keithfem.com/), a community radio experiment. Displays radio shows schedule and other goodies.
 4. [Landing Generic](https://github.com/mazzi/landing-generic) - A generic landing page to capture email leads. NodeJs + MongoDB.
-5. [Keithfem bot](https://github.com/mazzi/keithfembot) - A Telegram bot for [Keith F'em](https://www.keithfem.com/), a community radio experiment. Displays radio shows schedule and other goodies.
-6. [Alfa-Mogal](https://tulip-incandescent-wannanosaurus.glitch.me/) - A random name generator (yes, another one) based on made up words from [Miguel Tomasín](https://es.wikipedia.org/wiki/Reynols).
+5. [Coverboard](https://github.com/Coverboard) - Code Coverage metrics analysis. A Gem to add to your project and a display artifact. Built in RoR.
+6. ~~[Chorichannel](http://www.chorichannel.com.ar) - Based on your location, this webapp rates how good is the day to BBQ. Built in NodeJs, MongoDB, ExpressJs.~~ - R.I.P.
+7. [Craigshot](https://github.com/mazzi/craigshot) - A small python script to post a screenshot (meant for craiglist) of a url in tumblr.
 
 ### Latest Open Source Contributions
 
