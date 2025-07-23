@@ -1,0 +1,95 @@
+body {
+    background-color: #212121;
+    color: #eee;
+}
+
+a {
+    color: #82aaff;
+}
+
+div#menu a {
+    color: #eee;
+}
+
+div#menu p {
+    color: #eee;
+}
+
+div#content h2 a:hover {
+    color: #eee;
+}
+
+div.post ul li span.date {
+    color: #999;
+}
+
+div.post img {
+    border: 5px solid #eee;
+}
+
+div.post div.thumb {
+    background: #eee;
+}
+
+div.post div.thumb p:last-child {
+    color: #333;
+}
+
+div.post div.thumb a {
+    color: #333;
+}
+
+div.post blockquote {
+    background: #333;
+    color: #eee;
+}
+
+div.post blockquote a {
+    color: #eee;
+}
+
+div.post pre {
+    background: #333;
+    color: #eee;
+}
+
+div.post pre code {
+    color: #eee;
+}
+
+div.post code {
+    color: #eee;
+    background: #333;
+}
+
+div#content div.pagination span {
+    color: #666;
+}
+
+div#content div.pagination span a {
+    background: #333;
+    color: #eee;
+}
+
+div#content div.pagination span a:hover {
+    background: #973C3F;
+    color: #fff;
+}
+
+.tag {
+  background-color: #333;
+  color: #999;
+}
+
+#theme-switcher svg {
+    stroke: #eee;
+}
+
+#theme-switcher #sun-icon {
+    stroke: black;
+    fill: black;
+}
+
+#back svg {
+    stroke: #eee;
+}

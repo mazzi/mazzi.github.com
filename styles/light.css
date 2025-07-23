@@ -1,0 +1,92 @@
+body {
+    background-color: rgb(255,247,244);
+	color: black;
+}
+
+a {
+	color: blue;
+}
+
+div#menu a {
+    color: black;
+}
+
+div#menu p {
+    color: black;
+}
+
+div#content h2 a:hover {
+	color: black;
+}
+
+div.post ul li span.date {
+    color: gray;
+}
+
+div.post img {
+    border: 5px solid black;
+}
+
+div.post div.thumb {
+	background: #000;
+}
+
+div.post div.thumb p:last-child {
+	color: #ddd;
+}
+
+div.post div.thumb a {
+	color: #ddd;
+}
+
+div.post blockquote {
+	background: #242424;
+	color: #fff;
+}
+
+div.post blockquote a {
+	color: #fff;
+}
+
+div.post pre {
+	background: #21213F;
+	color: #ffa;
+}
+
+div.post pre code {
+	color: #ECF0F1;
+	background-color: transparent;
+}
+
+div.post code {
+	color: #21213F;
+	background: #ECF0F1;
+}
+
+div#content div.pagination span {
+	color: #aaa;
+}
+
+div#content div.pagination span a {
+	background: #ddd;
+	color: #000;
+}
+
+div#content div.pagination span a:hover {
+	background: #973C3F;
+	color: #fff;
+}
+
+.tag {
+  background-color: lightgray;
+  color: gray;
+}
+
+#theme-switcher svg {
+    stroke: black;
+    fill: black;
+}
+
+#back svg {
+    stroke: black;
+}
