@@ -5,6 +5,10 @@
 
 body {
     font-family: "IBM Plex Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 a {
@@ -21,6 +25,10 @@ a:hover {
 div#menu {
     text-align: center;
     margin: 0px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -59,6 +67,15 @@ div#main {
     div#main {
         padding: 0 10% 0 10%;
         font-size: xx-large;
+    }
+    div#menu li {
+        font-size: 1.2em;
+        margin-bottom: 5em;
+    }
+    div#menu p {
+        margin-left: 1em;
+        margin-right: 1em;
+        font-size: 2.5em;
     }
 }
 
@@ -217,6 +234,9 @@ figure.image {
   font-size: x-small;
 }
 
+
+/** Theme Switcher **/
+
 #theme-switcher {
     position: fixed;
     bottom: 10px;
@@ -229,7 +249,20 @@ figure.image {
 }
 
 #back svg {
-    width: 16px;
-    height: 16px;
     vertical-align: middle;
+}
+
+@media only screen and (max-width: 1000px) {
+    #theme-switcher {
+        height: 5em;
+        width: 5em;
+    }
+    #theme-switcher svg {
+        width: 100%;
+        height: 100%;
+    }
+    svg {
+        width: 2em;
+        height: 2em;
+    }
 }
