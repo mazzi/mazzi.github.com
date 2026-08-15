@@ -1,13 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<link rel="alternate" type="application/rss+xml" title="Atom feed" href="http://mazzi.github.com/atom.xml">
-		<title>{{ page.title }}</title>
 
-		<!-- Styles -->
-		<link rel="stylesheet" media="screen" href="/styles/screen.css">
-		<link rel="stylesheet" media="screen" href="/styles/light.css" id="theme-style">
+<head>
+    <meta charset="utf-8">
+    <link rel="alternate" type="application/rss+xml" title="Atom feed" href="{{ site.url }}/atom.xml">
+    <title>{{ page.title }}</title>
 
-	</head>
-	<body>
+    <meta name="description" content="mazzi's personal site: about, projects, and occasional writing.">
+    <meta name="author" content="mazzi">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="canonical" href="{{ site.url }}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="mazzi's personal site: about, projects, and occasional writing.">
+    <meta property="og:url" content="{{ site.url }}">
+
+    <!-- Styles -->
+    <link rel="stylesheet" media="screen" href="/styles/screen.css">
+    <link rel="stylesheet" media="screen" href="/styles/light.css" id="theme-style">
+
+    <script>
+        (function () {
+            const theme = (function () {
+                try {
+                    const saved = localStorage.getItem('theme');
+                    return saved === 'dark' || saved === 'light' ? saved : 'light';
+                } catch (e) {
+                    return 'light';
+                }
+            })();
+
+            const link = document.getElementById('theme-style');
+            if (link) link.href = '/styles/' + theme + '.css';
+
+            const moon = document.getElementById('moon-icon');
+            const sun = document.getElementById('sun-icon');
+            if (moon && sun) {
+                if (theme === 'dark') {
+                    moon.style.display = 'none';
+                    sun.style.display = 'block';
+                } else {
+                    moon.style.display = 'block';
+                    sun.style.display = 'none';
+                }
+            }
+
+            const themeSwitcher = document.getElementById('theme-switcher');
+            if (themeSwitcher) {
+                themeSwitcher.addEventListener('click', function () {
+                    const current = (function () {
+                        try {
+                            const saved = localStorage.getItem('theme');
+                            return saved === 'dark' || saved === 'light' ? saved : 'light';
+                        } catch (e) {
+                            return 'light';
+                        }
+                    })();
+
+                    const next = current === 'light' ? 'dark' : 'light';
+                    localStorage.setItem('theme', next);
+
+                    if (link) link.href = '/styles/' + next + '.css';
+                    if (moon && sun) {
+                        if (next === 'dark') {
+                            moon.style.display = 'none';
+                            sun.style.display = 'block';
+                        } else {
+                            moon.style.display = 'block';
+                            sun.style.display = 'none';
+                        }
+                    }
+                });
+            }
+        })();
+    </script>
+
+</head>
+
+<body>
